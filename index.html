@@ -2,18 +2,19 @@
 <html ng-app="algApp" ng-cloak>
 	<head>
 		<title>Algorithms</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<script src="js/main.js"></script>
 	</head>
 	<body>
 		<div ng-controller="collatzCtrl">
 			<h1>Collatz Conjecture</h1>
 			<input type="number" ng-model="collatzInput"/>
 			<button ng-click="update()">Calculate</button>
-			<p>{{collatzSteps}}</p>
+			<p>Steps: {{collatzSteps}}</p>
+			<p>Number of Steps: {{collatzNumSteps}}</p>
 
 		</div>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-		<script src="js/main.js"></script>
 	</body>
 
 </html>
