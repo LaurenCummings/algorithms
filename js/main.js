@@ -22,5 +22,5 @@ algApp.controller('collatzCtrl', function($scope) {
 });
 
 algApp.controller('mergeSort', function($scope) {
-
+	$scope.inputArray = [3, 5, 2, 1, 7, 4, 6];
 });
