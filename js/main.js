@@ -21,3 +21,6 @@ algApp.controller('collatzCtrl', function($scope) {
 
 });
 
+algApp.controller('mergeSort', function($scope) {
+
+});
