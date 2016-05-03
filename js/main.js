@@ -22,18 +22,37 @@ algApp.controller('collatzCtrl', function($scope) {
 });
 
 algApp.controller('mergeSort', function($scope) {
-	// $scope.inputArray = [3, 5, 2, 1, 7, 4, 6];
-	$scope.inputArray = [3];
+	$scope.inputArray = [3, 5, 2, 1, 7, 4, 6];
 
 	$scope.update = function() {
-		if ($scope.inputArray.length < 2) {
-			$scope.sortedArray = $scope.inputArray;
-		}
-		else {
-			$scope.sortedArray = 4;
-		}
+
+		mergeSort($scope.inputArray);
+
 	};
 
+function mergeSort(arr) {
+	if (arr.length < 2) {
+		$scope.sortedArray = arr;
+	}
+	else {
+		var mid = Math.floor(arr.length / 2);
+		alert(arr.slice(0,mid));
+		alert(mergeSort([3,5,2]));
+		// var subLeft = mergeSort(arr.slice(0,mid));
+
+		// var subRight = mergeSort(arr.slice(mid));
+
+		// $scope.sortedArray = merge(subLeft, subRight);
+	}
+}
+
+// function merge(a,b) {
+// 	var result = [];
+// 	while (a.length > 0 && b.length > 0) {
+// 		result.push(a[0] < b[0]? a.shift() : b.shift());
+// 		return result.concat(a.length? a : b);
+// 	}
+// }
 
 });
 
